@@ -1,0 +1,13 @@
+O arquivo .py principal pode ser encontrado em .\SerasaChallenge\SerasaChallenge\SerasaChallenge.py
+
+O funcionamento do programa consiste em:
+Existem duas listas estáticas: uma de palavras-chave relacionadas à operação Lava Jato (cada uma contendo uma pontuação correspondente), e uma de nomes de pessoas envolvidas na operação (cada um com a devida área de atuação);
+Após a inserção de uma url para uma possível notícia da Lava Jato, o programa carrega o arquivo html correspondente e parseia-o, retirando o conteúdo do mesmo e armazenando em formato text(legível);
+Esse conteúdo é dividido então em uma lista de todas as palavras encontradas nesse texto, a qual é utilizada para se fazer uma busca pelas palavras-chave mencionadas anteriormente;
+Para cada palavra-chave encontrada no texto, soma-se a pontuação referente a essa palavra em uma variável. Após somar todas as pontuações, divide-se o valor da variável pelo número de palavras encontradas no conteúdo (para normalizar a nota tanto para textos curtos quanto para textos extensos);
+Caso esse valor final seja superior a um limiar (calculado unica e exclusivamente a partir de testes reais), então diz-se que a página trata da operação Lava Jato;
+Nesse caso (positivo), parseia-se novamente o texto em busca de nomes completos, utilizando uma expressão regular refinada, criando uma lista de possíveis nomes dentro do conteúdo;
+Procura-se cada possível nome na lista anteriormente especificada (também por meio de expressões regulares, estas especificas para cada nome), e, no caso de o nome estar na lista, ele é exibido ao usuário, juntamente com sua área de atuação;
+Em caso negativo, em que a pontuação final não atinge o necessário, apenas se diz que a página não trata do assunto 'Lava Jato'.
+
+Observação: o arquivo de projeto do Visual Studio está incluído no repositório, caso haja interesse de utilizar o programa para executar a aplicação.
